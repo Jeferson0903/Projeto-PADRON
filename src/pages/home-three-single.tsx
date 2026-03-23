@@ -6,7 +6,6 @@ import ContactMap from "@/components/sections/contact/contactMap"
 import HeroThree from "@/components/sections/heros/heroThree"
 import MarqueTwo from "@/components/sections/marques/marqueTwo"
 import ServicesThree from "@/components/sections/services/servicesThree"
-import TeamesThree from "@/components/sections/teames/teamesThree"
 import TestimonialThree from "@/components/sections/testimonials/testimonialThree"
 import WorkProcess from "@/components/sections/workProcess"
 import SectionTitle from "@/components/ui/sectionTitle"
@@ -20,7 +19,6 @@ const HomeThreeSingle = () => {
             <WorkProcess />
             <AchievementTwo achievementWrapperClass="style-2" className="section-bg-2" />
             <MarqueTwo className="section-padding" />
-            <TeamesThree />
             <TestimonialThree />
             <section id="contact" className="contact-section fix section-padding section-bg-light">
                 <div className="container">

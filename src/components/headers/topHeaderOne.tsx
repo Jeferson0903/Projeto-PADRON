@@ -8,7 +8,7 @@ const TopHeaderOne = ({ wrapperClass, className }: { wrapperClass?: string, clas
                     <ul className="contact-list">
                         <li>
                             <i className="far fa-envelope" />
-                            <Link to="mailto:info@example.com" className="link">info@example.com</Link>
+                            <Link to="mailto:padron.eletrica@gmail.com" className="link">padron.eletrica@gmail.com</Link>
                         </li>
                         <li>
                             <i className="fa-solid fa-phone-volume" />

@@ -16,21 +16,6 @@ const services = [
     { text: "Contato", link: "/#contact" },
 ];
 
-const recentPosts = [
-    {
-        image: "/img/news/pp1.jpg",
-        date: "20 Feb, 2025",
-        title: "2021 Batterman Award honors Brad Burkhart",
-        link: "/#blog",
-    },
-    {
-        image: "/img/news/pp2.jpg",
-        date: "15 Dec, 2025",
-        title: "2021 Batterman Award honors Brad Burkhart",
-        link: "/#blog",
-    },
-];
-
 const socialReviewLinks = [
     {
         icon: "fa-brands fa-whatsapp",
@@ -146,39 +131,6 @@ const Footer = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
-                        </div>
-                        <div
-                            className="col-xl-4 col-lg-4 col-md-6 wow slideUp"
-                            data-delay=".7"
-                        >
-                            <div className="single-footer-widget style-margin">
-                                <div className="widget-head">
-                                    <h3>Posts recentes</h3>
-                                </div>
-                                <div className="recent-post-area">
-                                    {recentPosts.map((post, index) => (
-                                        <div
-                                            key={index}
-                                            className={`recent-post-items ${index === recentPosts.length - 1 ? "mb-0" : ""}`}
-                                        >
-                                            <div className="thumb">
-                                                <img src={post.image} alt="post-img" />
-                                            </div>
-                                            <div className="content">
-                                                <ul className="post-date">
-                                                    <li>
-                                                        <i className="fa-solid fa-calendar-days me-2" />
-                                                        {post.date}
-                                                    </li>
-                                                </ul>
-                                                <h6>
-                                                    <Link to={post.link}>{post.title}</Link>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </div>

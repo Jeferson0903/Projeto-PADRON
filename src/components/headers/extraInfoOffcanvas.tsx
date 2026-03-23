@@ -43,7 +43,7 @@ const ExtraInfoOffcanvas = () => {
                                             <i className="fal fa-map-marker-alt" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link to="#">Rio de Janeiro, Brasil</Link>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=R.+Miguel+Lima+55+fundos+Aboli%C3%A7%C3%A3o+Rio+de+Janeiro+RJ+20755-050" target="_blank" rel="noopener noreferrer">R. Miguel Lima, 55 fundos - Abolição, Rio de Janeiro - RJ, 20755-050</a>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
@@ -51,7 +51,7 @@ const ExtraInfoOffcanvas = () => {
                                             <i className="fal fa-envelope" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link to="mailto:info@example.com">info@example.com</Link>
+                                            <Link to="mailto:padron.eletrica@gmail.com">padron.eletrica@gmail.com</Link>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
