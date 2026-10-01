@@ -20,10 +20,7 @@ const AboutThree = () => {
                     <div className="row align-items-lg-center g-4 g-xl-5">
                         <div className="col-lg-6 wow slideUp" data-delay=".4">
                             <div className="about-image">
-                                <div className="shape-image">
-                                    <img src="/img/about/shape.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-                                </div>
-                                <div className="circle-shape">
+                                                               <div className="circle-shape">
                                     <img src="/img/about/circle.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                 </div>
                                 <div className="about-media-frame">

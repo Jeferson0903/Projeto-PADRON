@@ -314,3 +314,20 @@ body {
         }
     }
 }
+
+// >>> Correção definitiva para o vídeo/imagem não ser cortado no topo <<<
+.about-image {
+    .about-media-frame {
+        width: 100%;
+        height: auto !important;
+        overflow: hidden;
+        
+        video.about-main-video,
+        img {
+            width: 100% !important;
+            height: auto !important; 
+            object-fit: contain !important; // Garante que o vídeo aparece inteiro sem cortar
+            object-position: top center !important; // Alinha pelo topo para garantir que nada é escondido
+        }
+    }
+}
