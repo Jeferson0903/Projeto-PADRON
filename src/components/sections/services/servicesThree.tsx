@@ -5,12 +5,15 @@ import SectionTitle from "@/components/ui/sectionTitle"
 
 const ServicesThree = () => {
     return (
-        <section id="services" className="service-section-3 pb-0 fix section-padding bg-cover" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80)' }}>
+        <section
+            id="services"
+            className="service-section-3 service-section-3--custom-bg pb-0 fix section-padding bg-cover"
+        >
             <div className="container">
                 <div className="section-title-area">
                     <SectionTitle>
-                        <SectionTitle.SubTitle>Menu de serviços</SectionTitle.SubTitle>
-                        <SectionTitle.Title>Soluções em Elétrica, Automação<br />CFTV e Alarmes</SectionTitle.Title>
+                        <SectionTitle.SubTitle>O que fazemos</SectionTitle.SubTitle>
+                        <SectionTitle.Title>Elétrica, automação, CFTV e alarmes</SectionTitle.Title>
                     </SectionTitle>
                 </div>
                 <div className="row">

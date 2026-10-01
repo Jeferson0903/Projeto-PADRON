@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const PageTitle = ({ title, currentPage }: { title: string; currentPage: string }) => {
   return (
-    <div className="breadcrumb-wrapper bg-cover" style={{ backgroundImage: 'url("/img/breadcrumb.jpg")' }}>
+    <div className="breadcrumb-wrapper bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("/img/bg/padron-bg-08.png")' }}>
       <div className="border-shape">
-        <img src="/img/element.png" alt="shape-img" />
+        <img src="/img/element.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
       </div>
       <div className="line-shape">
-        <img src="/img/line-element.png" alt="shape-img" />
+        <img src="/img/line-element.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
       </div>
       <div className="container">
         <div className="page-heading">

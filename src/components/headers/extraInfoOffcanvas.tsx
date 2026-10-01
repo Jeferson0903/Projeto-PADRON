@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SITE_LOGO_SRC } from '@/constants/siteLogo';
 import MobileMenuList from './mobileNavBar';
 
 const ExtraInfoOffcanvas = () => {
@@ -20,8 +21,8 @@ const ExtraInfoOffcanvas = () => {
                         <div className="offcanvas__content">
                             <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                                 <div className="offcanvas__logo">
-                                    <Link to="/">
-                                        <img src="https://ydjnshjgpsyzvaxwgoca.supabase.co/storage/v1/object/sign/Padron%20Prejeto/Capa_Orcamento_1_paint.jpg-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hM2Y5YzQ2Yy04NDY3LTQxMTgtOGZhNC1kYWE0ODU1NmEwY2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQYWRyb24gUHJlamV0by9DYXBhX09yY2FtZW50b18xX3BhaW50LmpwZy1yZW1vdmViZy1wcmV2aWV3LnBuZyIsImlhdCI6MTc3MTA3NTA4MywiZXhwIjoxODM0MTQ3MDgzfQ.tfjHqj1vBiDBmj-c7zGMHMiRb_HgD7Hzuka14wThbXM" alt="Padron" className="site-logo" />
+                                    <Link to="/" onClick={toggleOffcanvas}>
+                                        <img src={SITE_LOGO_SRC} alt="Padron Elétrica" className="site-logo" />
                                     </Link>
                                 </div>
                                 <div className="offcanvas__close">
@@ -30,7 +31,10 @@ const ExtraInfoOffcanvas = () => {
                                     </button>
                                 </div>
                             </div>
-                            <MobileMenuList/>
+                            
+                            {/* AQUI PASSAMOS A FUNÇÃO DE FECHAR PARA DENTRO DO MENU */}
+                            <MobileMenuList onMenuClick={toggleOffcanvas} />
+                            
                             <p className="text d-none d-lg-block">
                                 Soluções em elétrica e automação com qualidade e segurança. Entre em contato para orçamentos e projetos sob medida.
                             </p>
@@ -43,7 +47,7 @@ const ExtraInfoOffcanvas = () => {
                                             <i className="fal fa-map-marker-alt" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <a href="https://www.google.com/maps/search/?api=1&query=R.+Miguel+Lima+55+fundos+Aboli%C3%A7%C3%A3o+Rio+de+Janeiro+RJ+20755-050" target="_blank" rel="noopener noreferrer">R. Miguel Lima, 55 fundos - Abolição, Rio de Janeiro - RJ, 20755-050</a>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=R.+Miguel+Lima+55+Pilares+Rio+de+Janeiro+RJ+20755-050" target="_blank" rel="noopener noreferrer">R. Miguel Lima, 55 - Pilares, Rio de Janeiro - RJ, 20755-050</a>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
@@ -72,15 +76,9 @@ const ExtraInfoOffcanvas = () => {
                                     </li>
                                 </ul>
                                 <div className="header-button mt-4">
-                                    <Link to="/contact" className="theme-btn text-center">
+                                    <Link to="/#contact" onClick={toggleOffcanvas} className="theme-btn text-center">
                                         <span>Solicitar Orçamento<i className="fa-solid fa-arrow-right-long" /></span>
                                     </Link>
-                                </div>
-                                <div className="social-icon d-flex align-items-center">
-                                    <Link to="#"><i className="fab fa-facebook-f" /></Link>
-                                    <Link to="#"><i className="fa-brands fa-x-twitter" /></Link>
-                                    <Link to="#"><i className="fab fa-youtube" /></Link>
-                                    <Link to="#"><i className="fab fa-linkedin-in" /></Link>
                                 </div>
                             </div>
                         </div>

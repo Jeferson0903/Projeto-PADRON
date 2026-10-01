@@ -6,13 +6,13 @@ import SectionTitle from "@/components/ui/sectionTitle"
 
 const TestimonialFour = () => {
     return (
-        <section className="testimonial-section-4 fix section-padding bg-cover" style={{ backgroundImage: 'url("/img/section-bg.jpg")' }}>
+        <section className="testimonial-section-4 fix section-padding bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("https://ntsuddpjnvgkhkpufisc.supabase.co/storage/v1/object/public/Midias-Clientes/WhatsApp%20Image%202026-03-09%20at%2015.44.03asdasds.jpeg")' }}>
             <div className="container">
                 <div className="testimonial-wrapper-2">
                     <div className="row">
                         <div className="col-lg-5 wow slideUp" data-delay=".4">
                             <div className="tesimonial-image">
-                                <img src="/img/testimonial/04.png" alt="img" />
+                                <img src="/img/testimonial/04.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                             </div>
                         </div>
                         <div className="col-lg-6 mt-4 mt-lg-0">

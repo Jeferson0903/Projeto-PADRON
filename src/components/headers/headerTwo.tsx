@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { SITE_LOGO_SRC } from "@/constants/siteLogo"
 import TopHeaderOne from "./topHeaderOne"
 import Navbar from "./navbar"
 import SearchPopup from "./searchPopup"
@@ -13,7 +14,7 @@ const HeaderTwo = () => {
             <div id="header-sticky" className={`header-2 ${isSticky ? 'sticky' : ''}`}>
                 <div className="main-logo">
                     <Link to="/">
-                        <img src="https://ydjnshjgpsyzvaxwgoca.supabase.co/storage/v1/object/sign/Padron%20Prejeto/Capa_Orcamento_1_paint.jpg-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hM2Y5YzQ2Yy04NDY3LTQxMTgtOGZhNC1kYWE0ODU1NmEwY2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQYWRyb24gUHJlamV0by9DYXBhX09yY2FtZW50b18xX3BhaW50LmpwZy1yZW1vdmViZy1wcmV2aWV3LnBuZyIsImlhdCI6MTc3MTA3NTA4MywiZXhwIjoxODM0MTQ3MDgzfQ.tfjHqj1vBiDBmj-c7zGMHMiRb_HgD7Hzuka14wThbXM" alt="Padron - Elétrica, Automação, CFTV" className="site-logo" />
+                        <img src={SITE_LOGO_SRC} alt="Padron - Elétrica, Automação, CFTV" className="site-logo" />
                     </Link>
                 </div>
                 <div className="container-fluid">
@@ -21,7 +22,7 @@ const HeaderTwo = () => {
                         <div className="header-main">
                             <div className="logo d-none">
                                 <Link to="/" className="header-logo">
-                                    <img src="https://ydjnshjgpsyzvaxwgoca.supabase.co/storage/v1/object/sign/Padron%20Prejeto/Capa_Orcamento_1_paint.jpg-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hM2Y5YzQ2Yy04NDY3LTQxMTgtOGZhNC1kYWE0ODU1NmEwY2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQYWRyb24gUHJlamV0by9DYXBhX09yY2FtZW50b18xX3BhaW50LmpwZy1yZW1vdmViZy1wcmV2aWV3LnBuZyIsImlhdCI6MTc3MTA3NTA4MywiZXhwIjoxODM0MTQ3MDgzfQ.tfjHqj1vBiDBmj-c7zGMHMiRb_HgD7Hzuka14wThbXM" alt="Padron" className="site-logo" />
+                                    <img src={SITE_LOGO_SRC} alt="Padron Elétrica" className="site-logo" />
                                 </Link>
                             </div>
                             <div className="header-left">
@@ -36,9 +37,9 @@ const HeaderTwo = () => {
                             <div className="header-right d-flex justify-content-end align-items-center">
                                 <SearchPopup />
                                 <div className="header-button">
-                                    <Link to="/contact" className="theme-btn">
+                                    <Link to="/#contact" className="theme-btn">
                                         <span>
-                                            free Consultancy
+                                            Solicitar orçamento
                                             <i className="fa-solid fa-arrow-right-long" />
                                         </span>
                                     </Link>

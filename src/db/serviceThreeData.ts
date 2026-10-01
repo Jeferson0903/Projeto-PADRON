@@ -14,7 +14,7 @@ export const serviceThreeData: ServiceDataType[] = [
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1565792390-2d6581b2f266?w=600&q=85',
-        icon: '/img/service/icon/s-icon-2.svg',
+        icon: '/img/service/icon/s-icon-4.svg',
         title: 'Padrão LIGHT',
         subtitle: 'Aumento de Carga',
         description: 'Adequação e montagem de padrão LIGHT e projetos de aumento de carga conforme normas da concessionária.',

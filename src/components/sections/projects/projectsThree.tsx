@@ -11,7 +11,7 @@ import ModalVideo from 'react-modal-video';
 const ProjectsThree = () => {
     const [isOpen, setOpen] = useState(false);
     return (
-        <section id="projects" className="project-section-3 section-padding pb-0 fix bg-cover" style={{ backgroundImage: 'url("/img/testimonial/bg.jpg")' }}>
+        <section id="projects" className="project-section-3 section-padding pb-0 fix bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("/img/bg/padron-bg-07.png")' }}>
             <div className="container">
                 <div className="section-title-area">
                     <SectionTitle>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 const ServicesOne = () => {
   return (
-    <section id="services" className="service-section fix section-padding bg-cover" style={{ backgroundImage: 'url("/img/service/service-bg.jpg")' }}>
+    <section id="services" className="service-section fix section-padding bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("/img/bg/padron-bg-05.png")' }}>
       <div className="container">
         <div className="section-title-area">
           <SectionTitle>

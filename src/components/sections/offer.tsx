@@ -14,10 +14,10 @@ const Offer = () => {
     return (
         <section className="offer-section fix section-bg-2 section-padding">
             <div className="line-shape">
-                <img src="/img/team/line-shape.png" alt="shape-img" />
+                <img src="/img/team/line-shape.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
             <div className="mask-shape">
-                <img src="/img/team/mask-shape.png" alt="shape-img" />
+                <img src="/img/team/mask-shape.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
             <div className="container">
                 <SectionTitle className="text-center">
@@ -33,10 +33,10 @@ const Offer = () => {
                         >
                             <div className={`offer-items ${item.isActive ? 'active' : ''}`}>
                                 <div className="shape-top">
-                                    <img src="/img/shape/offer-top.png" alt="shape-img" />
+                                    <img src="/img/shape/offer-top.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                 </div>
                                 <div className="shape-bottom">
-                                    <img src="/img/shape/offer-bottom.png" alt="shape-img" />
+                                    <img src="/img/shape/offer-bottom.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                 </div>
                                 <div className="icon">{item.icon}</div>
                                 <div className="content">

@@ -11,7 +11,17 @@ const ProjectCard = ({ project, className, iconCalss, isIconShow=true }: Project
     return (
         <div className={`project-items ${className}`}>
             <div className="project-image">
-                <img src={project.image} alt="project-img" />
+                <img
+                    src={project.image}
+                    alt="project-img"
+                    loading="lazy"
+                    onError={(e) => {
+                        const t = e.currentTarget;
+                        t.onerror = null;
+                        t.src =
+                            "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80";
+                    }}
+                />
                 <div className="project-content">
                     <p>{project.category}</p>
                     <h4>

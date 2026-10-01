@@ -6,12 +6,12 @@ import SectionTitle from "@/components/ui/sectionTitle"
 
 const TestimonialThree = () => {
     return (
-        <section className="tesimonial-section-3 section-padding section-bg-2 bg-cover">
+        <section id="depoimentos" className="tesimonial-section-3 section-padding section-bg-2 bg-cover">
             <div className="line-shape">
-                <img src="/img/team/line-shape.png" alt="shape-img" />
+                <img src="/img/team/line-shape.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
             <div className="mask-shape">
-                <img src="/img/team/mask-shape.png" alt="shape-img" />
+                <img src="/img/team/mask-shape.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
             <div className="array-button">
                 <button className="array-prev"><i className="fa fa-arrow-left" /></button>
@@ -20,7 +20,7 @@ const TestimonialThree = () => {
             <div className="container">
                 <SectionTitle className="text-center">
                     <SectionTitle.SubTitle className="text-white">Depoimentos</SectionTitle.SubTitle>
-                    <SectionTitle.Title className="text-white">O que nossos clientes<br />dizem sobre nós</SectionTitle.Title>
+                    <SectionTitle.Title className="text-white">Clientes que recomendam</SectionTitle.Title>
                 </SectionTitle>
                 <Swiper
                     speed={1500}

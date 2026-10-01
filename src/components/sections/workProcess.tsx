@@ -3,15 +3,15 @@ import SectionTitle from "../ui/sectionTitle"
 
 const WorkProcess = () => {
     return (
-        <section className="work-process-section fix section-padding pt-0">
+        <section id="process" className="work-process-section fix section-padding section-bg-2">
             <div className="container">
                 <SectionTitle className="text-center">
-                    <SectionTitle.SubTitle>Nosso processo</SectionTitle.SubTitle>
-                    <SectionTitle.Title>Como trabalhamos</SectionTitle.Title>
+                    <SectionTitle.SubTitle>Passo a passo</SectionTitle.SubTitle>
+                    <SectionTitle.Title>Como fechamos seu projeto</SectionTitle.Title>
                 </SectionTitle>
                 <div className="process-work-wrapper">
                     <div className="line-shape">
-                        <img src="/img/process/linepng.png" alt="img" />
+                        <img src="/img/process/linepng.png" alt="" aria-hidden onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                     </div>
                     <div className="row">
                         {workProcessData.map((process, index) => (

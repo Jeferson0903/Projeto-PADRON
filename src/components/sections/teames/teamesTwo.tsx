@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const TeamesTwo = ({ isTitleShow }: { isTitleShow: boolean }) => {
     return (
-        <section id="team" className="team-section-2 section-padding bg-cover" style={{ backgroundImage: 'url("/img/team/bg.jpg")' }}>
+        <section id="team" className="team-section-2 section-padding bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("/img/bg/padron-bg-09.png")' }}>
             <div className="container">
                 {
                     isTitleShow &&

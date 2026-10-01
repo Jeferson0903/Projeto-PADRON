@@ -1,6 +1,35 @@
 import { TestimonialType } from "@/db/testimonialsTwoData"
 
 const TestimonialCard = ({ testimonial }: { testimonial: TestimonialType }) => {
+    const isReal = testimonial.isRealImage === true
+
+    if (isReal) {
+        return (
+            <div className="testimonial-box-items testimonial-box-items--real">
+                <div className="testimonial-real-image">
+                    <img
+                        src={testimonial.image}
+                        alt="Depoimento real de cliente"
+                        loading="lazy"
+                        onError={(e) => {
+                            const t = e.currentTarget;
+                            t.onerror = null;
+                            t.style.display = 'none';
+                        }}
+                    />
+                </div>
+                <div className="testimonial-real-caption">
+                    <span>{testimonial.role}</span>
+                    <div className="star">
+                        {[...Array(Math.floor(testimonial.stars))].map((_, i) => (
+                            <i key={i} className="fas fa-star" />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="testimonial-box-items">
             <div className="icon">

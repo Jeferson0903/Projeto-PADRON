@@ -1,0 +1,282 @@
+//>>>>> Ajustes para modo mobile - experiência perfeita em telas pequenas <<<<<//
+
+// Evita zoom em inputs no iOS e overflow horizontal
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Containers com padding adequado no mobile
+.container,
+.container-fluid {
+    @include breakpoint(max-md) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include breakpoint(max-sm) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.section-padding-sm {
+    @include breakpoint(max-sm) {
+        padding: 40px 0;
+    }
+}
+
+// Hero 3 - títulos e botões em telas muito pequenas
+.hero-3 {
+    .hero-content {
+        @include breakpoint(max-sm) {
+            padding-top: 100px;
+            padding-bottom: 120px;
+        }
+        @include breakpoint(max-xxsmall) {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+        h1 {
+            @include breakpoint(max-xxsmall) {
+                font-size: 28px;
+                line-height: 1.25;
+            }
+        }
+        .hero-button {
+            .theme-btn {
+                @include breakpoint(max-sm) {
+                    padding: 14px 24px;
+                    font-size: 15px;
+                    display: inline-block;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+// Seção de serviços (background e cards)
+.service-section-3 {
+    @include breakpoint(max-md) {
+        background-attachment: scroll;
+        background-position: center;
+    }
+    @include breakpoint(max-sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .section-title-area {
+        @include breakpoint(max-sm) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.service-card-items {
+    @include breakpoint(max-sm) {
+        margin-top: 20px;
+    }
+    .service-content {
+        @include breakpoint(max-md) {
+            padding: 28px 24px;
+        }
+        @include breakpoint(max-sm) {
+            padding: 24px 20px;
+            margin-top: -60px;
+        }
+        .icon {
+            @include breakpoint(max-sm) {
+                width: 56px;
+                height: 56px;
+                line-height: 52px;
+                margin-top: -56px;
+                margin-bottom: 20px;
+            }
+            img {
+                @include breakpoint(max-sm) {
+                    max-width: 28px;
+                    max-height: 28px;
+                }
+            }
+        }
+        h4 {
+            @include breakpoint(max-sm) {
+                font-size: 18px;
+                line-height: 1.35;
+            }
+        }
+        p {
+            @include breakpoint(max-sm) {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+        .theme-btn-2 {
+            @include breakpoint(max-sm) {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+        }
+    }
+    .service-image {
+        img {
+            @include breakpoint(max-sm) {
+                min-height: 180px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// Contato - área de informações e formulário
+.contact-wrapper-2 {
+    .contact-left-items .contact-info-area-2 {
+        @include breakpoint(max-md) {
+            padding: 30px 24px;
+        }
+        @include breakpoint(max-sm) {
+            padding: 24px 18px;
+        }
+        .contact-info-items {
+            @include breakpoint(max-sm) {
+                gap: 14px;
+                padding-bottom: 16px;
+            }
+            .icon {
+                @include breakpoint(max-sm) {
+                    width: 48px;
+                    height: 48px;
+                    line-height: 48px;
+                    flex-shrink: 0;
+                }
+            }
+            .content {
+                min-width: 0;
+                h3 {
+                    @include breakpoint(max-sm) {
+                        font-size: 16px;
+                        line-height: 1.4;
+                    }
+                    a {
+                        word-break: break-word;
+                        overflow-wrap: break-word;
+                    }
+                }
+                p {
+                    @include breakpoint(max-sm) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .contact-content .contact-form-items .form-clt {
+        input, textarea {
+            @include breakpoint(max-sm) {
+                padding: 14px 16px;
+                font-size: 16px; // Evita zoom no iOS
+            }
+        }
+        textarea {
+            @include breakpoint(max-sm) {
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+
+// Seção de contato (título e grid)
+.contact-section .contact-wrapper-2 {
+    @include breakpoint(max-sm) {
+        .row.g-4 {
+            --bs-gutter-x: 1rem;
+            --bs-gutter-y: 1.5rem;
+        }
+    }
+}
+
+// Marquee / texto deslizante
+.marquee-item.style-2 .text-slider {
+    @include breakpoint(max-sm) {
+        font-size: 26px;
+        height: 50px;
+        margin-right: 20px;
+    }
+    @include breakpoint(max-xxsmall) {
+        font-size: 22px;
+        margin-right: 16px;
+    }
+}
+
+.marquee-wrapper.style-2 {
+    @include breakpoint(max-sm) {
+        line-height: 48px;
+    }
+}
+
+// Footer
+.footer-widgets-wrapper {
+    @include breakpoint(max-sm) {
+        padding: 40px 0 60px;
+    }
+    .single-footer-widget .widget-head h3 {
+        @include breakpoint(max-sm) {
+            font-size: 20px;
+        }
+    }
+}
+
+// Títulos de seção
+.section-title h2 {
+    @include breakpoint(max-xxsmall) {
+        font-size: 24px;
+    }
+}
+
+// Botões com área de toque adequada (mín. 44px)
+.theme-btn,
+.theme-btn-2,
+.btn {
+    @include breakpoint(max-sm) {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Map iframe
+.map-items .googpemap iframe {
+    @include breakpoint(max-sm) {
+        height: 320px;
+    }
+}
+
+// CTA banner (WhatsApp) - layout em coluna no mobile
+.cta-banner-2 .cta-wrapper-2 {
+    @include breakpoint(max-sm) {
+        padding: 28px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    h3 {
+        @include breakpoint(max-xxsmall) {
+            font-size: 22px;
+        }
+    }
+}
+
+// Seção empresas parceiras (brand)
+.brand-section .brand-wrapper {
+    @include breakpoint(max-sm) {
+        h6 {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+    }
+}

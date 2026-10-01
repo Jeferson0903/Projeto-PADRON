@@ -4,10 +4,10 @@ import { Autoplay } from "swiper/modules"
 import 'swiper/css';
 const PartnersOne = ({ className }: { className?: string }) => {
     return (
-        <div className={`brand-section fix section-padding ${className}`}>
+        <div id="parceiros" className={`brand-section fix section-padding ${className ?? ""}`}>
             <div className="container">
                 <div className="brand-wrapper">
-                    <h6 className="text-center wow slideUp" data-delay=".3">Clientes que confiam na Padron</h6>
+                    <h6 className="text-center wow slideUp" data-delay=".3">Parceiros e fornecedores</h6>
                     <Swiper
                         breakpoints={{
                             1199: {
@@ -41,7 +41,16 @@ const PartnersOne = ({ className }: { className?: string }) => {
                                 return (
                                     <SwiperSlide key={id}>
                                         <div className="brand-image">
-                                            <img src={img} alt="brand-img" />
+                                            <img
+                                                src={img}
+                                                alt="brand-img"
+                                                loading="lazy"
+                                                onError={(e) => {
+                                                    const t = e.currentTarget;
+                                                    t.onerror = null;
+                                                    t.src = "/img/brand.png";
+                                                }}
+                                            />
                                         </div>
                                     </SwiperSlide>
                                 )

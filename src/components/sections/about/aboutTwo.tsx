@@ -3,14 +3,14 @@ import { Link } from "react-router-dom"
 
 const AboutTwo = () => {
     return (
-        <section id="about" className="about-section section-padding fix bg-cover" style={{ backgroundImage: 'url("/img/service/service-bg-2.jpg")' }}>
+        <section id="about" className="about-section section-padding fix bg-cover" style={{ backgroundColor: '#1a1a2e', backgroundImage: 'url("/img/bg/padron-bg-04.png")' }}>
             <div className="container">
                 <div className="about-wrapper style-2">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="about-image-items">
                                 <div className="circle-shape">
-                                    <img src="/img/about/circle.png" alt="shape-img" />
+                                    <img src="/img/about/circle.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                 </div>
                                 <div className="counter-shape float-bob-y">
                                     <div className="icon">
@@ -21,9 +21,9 @@ const AboutTwo = () => {
                                         <p>Of Experience</p>
                                     </div>
                                 </div>
-                                <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img/about/03.png")' }}>
+                                <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundColor: '#2d2d2d', backgroundImage: 'url("/img/about/03.png")' }}>
                                     <div className="about-image-2 wow slideUp" data-delay=".5">
-                                        <img src="/img/about/04.jpg" alt="about-img" />
+                                        <img src="/img/about/04.jpg" alt="Padron" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ const AboutTwo = () => {
                                         </Link>
                                     </div>
                                     <div className="author-image wow slideUp" data-delay=".7">
-                                        <img src="/img/about/author.png" alt="author-img" />
+                                        <img src="/img/about/author.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                                         <div className="content">
                                             <h6>Ronald Richards</h6>
                                             <p>Co, Founder</p>

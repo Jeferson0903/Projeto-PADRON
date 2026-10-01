@@ -34,18 +34,18 @@ const achievementData = [
 ];
 
 
-const AchievementTwo = ({ achievementWrapperClass, className }: { achievementWrapperClass?: string, className?: string }) => {
+const AchievementTwo = ({ achievementWrapperClass, className, id }: { achievementWrapperClass?: string; className?: string; id?: string }) => {
     const { ref, inView } = useInView({
         threshold: 0.2,
         triggerOnce: true
     });
     return (
-        <section className={`achievement-section-2 fix ${className}`}>
+        <section id={id} className={`achievement-section-2 fix ${className ?? ""}`}>
             <div className="container">
-                <div className={`achievement-wrapper ${achievementWrapperClass}`}>
+                <div className={`achievement-wrapper ${achievementWrapperClass ?? ""}`}>
                     <SectionTitle className="mb-0">
-                        <SectionTitle.SubTitle className="text-white">Resultados</SectionTitle.SubTitle>
-                        <SectionTitle.Title className="text-white">Nossos números em projetos elétricos</SectionTitle.Title>
+                        <SectionTitle.SubTitle className="text-white">Em números</SectionTitle.SubTitle>
+                        <SectionTitle.Title className="text-white">Resultados da Padron</SectionTitle.Title>
                     </SectionTitle>
                     <div className="counter-area" ref={ref}>
                         {achievementData.map((item) => (
@@ -55,7 +55,13 @@ const AchievementTwo = ({ achievementWrapperClass, className }: { achievementWra
                                 data-delay={item.delay}
                             >
                                 <div className="icon">
-                                    <img src={item.icon} alt="icon-img" />
+                                    <img
+                                        src={item.icon}
+                                        alt="icon-img"
+                                        onError={(e) => {
+                                            e.currentTarget.style.display = "none";
+                                        }}
+                                    />
                                 </div>
                                 <div className="content">
                                     <h2>

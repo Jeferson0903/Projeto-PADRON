@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { SITE_LOGO_SRC } from "@/constants/siteLogo";
 
 const quickLinks = [
     { text: "Sobre", link: "/#about" },
     { text: "Serviços", link: "/#services" },
-    { text: "Blog", link: "/#blog" },
-    { text: "FAQ", link: "/#faq" },
+    { text: "Processo", link: "/#process" },
+    { text: "Anderson", link: "/#anderson" },
+    { text: "Depoimentos", link: "/#depoimentos" },
     { text: "Contato", link: "/#contact" },
 ];
 
@@ -27,16 +29,20 @@ const socialReviewLinks = [
         label: "INSTAGRAM",
         link: "https://www.instagram.com/eletrica_padron/",
     },
-    {
-        icon: "fa-brands fa-google",
-        label: "AVALIE AQUI",
-        link: "https://www.google.com/search?q=padron+-+el%C3%A9trica+predial+-+comercial+.+automa%C3%A7%C3%A2o+.+cftv+-+porteiro+eletr%C3%B4nico+.+aumento+de+carga+-+padr%C3%A3o+light.&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGIAEGIoFMgkIARAjGCcY6gIyDwgCECMYJxjqAhiABBiKBTIPCAMQIxgnGOoCGIAEGIoFMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIPCAYQIxgnGOoCGIAEGIoFMg8IBxAjGCcY6gIYgAQYigXSAQkxODA3ajBqMTWoAgiwAgHxBSsPYtMYnzME8QUrD2LTGJ8zBA&sourceid=chrome&ie=UTF-8#lpg=cid:CgIgAQ%3D%3D,ik:CAoSK0FGMVFpcFA5NnNrNldZdGN5RExMNU1PWV83djRMdXdHYUpvOUx6eGNZVEU",
-    },
 ];
 
 const Footer = () => {
+    // Função para rolar suavemente para o topo
+    const scrollToTop = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
-        <footer className="footer-section footer-bg">
+        <footer className="footer-section footer-bg" style={{ position: 'relative' }}>
             <div className="footer-social-review">
                 <div className="container">
                     <div className="row justify-content-center g-4">
@@ -72,7 +78,7 @@ const Footer = () => {
             </div>
             <div className="footer-widgets-wrapper">
                 <div className="shape-1">
-                    <img src="/img/footer-shape-1.png" alt="shape-img" />
+                    <img src="/img/footer-shape-1.png" alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -83,7 +89,7 @@ const Footer = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link to="/">
-                                        <img src="https://ydjnshjgpsyzvaxwgoca.supabase.co/storage/v1/object/sign/Padron%20Prejeto/Capa_Orcamento_1_paint.jpg-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hM2Y5YzQ2Yy04NDY3LTQxMTgtOGZhNC1kYWE0ODU1NmEwY2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQYWRyb24gUHJlamV0by9DYXBhX09yY2FtZW50b18xX3BhaW50LmpwZy1yZW1vdmViZy1wcmV2aWV3LnBuZyIsImlhdCI6MTc3MTA3NTA4MywiZXhwIjoxODM0MTQ3MDgzfQ.tfjHqj1vBiDBmj-c7zGMHMiRb_HgD7Hzuka14wThbXM" alt="Padron" className="site-logo site-logo-footer" />
+                                        <img src={SITE_LOGO_SRC} alt="Padron Elétrica" className="site-logo site-logo-footer" />
                                     </Link>
                                 </div>
                                 <div className="footer-content">
@@ -136,23 +142,41 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-bottom style-2">
-                <div className="container">
-                    <div className="footer-wrapper d-flex align-items-center justify-content-between">
-                        <p className="wow slideLeft color-2" data-delay=".3">
-                            © {new Date().getFullYear()} Padron - Elétrica, Automação e CFTV
-                        </p>
-                        <ul className="footer-menu wow slideRight" data-delay=".5">
-                            <li>
-                                <Link to="/#contact">Contato</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <Link to="#" id="scrollUp" className="scroll-icon">
-                    <i className="fa fa-arrow-up" />
-                </Link>
-            </div>
+            
+            {/* BOTÃO DE VOLTAR AO TOPO FIXADO MANTIDO */}
+            <button 
+                onClick={scrollToTop} 
+                className="scroll-icon"
+                aria-label="Voltar ao topo"
+                style={{
+                    position: 'fixed',
+                    bottom: '30px',
+                    right: '30px',
+                    width: '50px',
+                    height: '50px',
+                    borderRadius: '50%',
+                    backgroundColor: '#facc15', // Amarelo
+                    color: '#000',
+                    border: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    zIndex: 9999,
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+                    transition: 'transform 0.2s, background-color 0.2s'
+                }}
+                onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = '#eab308';
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                }}
+                onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = '#facc15';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                }}
+            >
+                <i className="fa fa-arrow-up" style={{ fontSize: '18px' }} />
+            </button>
         </footer>
     );
 };
