@@ -231,3 +231,28 @@ html {
     color: #000000 !important; /* Texto preto para manter o contraste */
     border-color: #eab308 !important;
 }
+
+/* Correção do hover do botão Ver Serviços */
+.theme-btn.about-unified-home__btn-primary:hover {
+    color: #000000 !important; /* Muda o texto para preto ao passar o mouse */
+}
+
+/* Correção do hover do botão Solicitar Orçamento (bg-white) */
+.theme-btn.bg-white:hover {
+    color: #000000 !important; 
+}
+
+/* Remove a linha branca e o triângulo da caixa principal */
+.cta-wrapper-2 {
+    border-left: none !important;
+}
+
+.cta-wrapper-2::before,
+.cta-wrapper-2::after {
+    display: none !important;
+}
+
+/* Devolve o espaçamento para o texto não ficar encostado à área da esquerda */
+.cta-wrapper-2 h3 {
+    padding-left: 30px !important; 
+}
