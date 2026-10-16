@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { SITE_LOGO_SRC } from "@/constants/siteLogo";
 
 const quickLinks = [
     { text: "Sobre", link: "/#about" },
