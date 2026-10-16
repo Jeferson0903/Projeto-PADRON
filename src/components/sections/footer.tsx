@@ -89,7 +89,7 @@ const Footer = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link to="/">
-                                        <img src={SITE_LOGO_SRC} alt="Padron Elétrica" className="site-logo site-logo-footer" />
+                                        <img src="/img/PADRON-TEL.png" alt="Padron Elétrica" className="site-logo site-logo-footer" />
                                     </Link>
                                 </div>
                                 <div className="footer-content">
